@@ -1,4 +1,5 @@
 function execute(url) {
+    url = url.replace("truyengihotne.net","truyengihotne.com")
     let doc = fetch(url).html();
     let el = doc.select("#episode_list li a");
     let data = [];
@@ -7,7 +8,7 @@ function execute(url) {
         data.push({
             name: e.select('.no').text(),
             url: e.attr("href"),
-            host: "https://truyengihotne.net"
+            host: "https://truyengihotne.com"
         })
     }
     return Response.success(data);

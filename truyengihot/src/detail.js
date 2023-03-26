@@ -1,4 +1,5 @@
 function execute(url) {
+    url = url.replace("truyengihotne.net","truyengihotne.com")
     var doc = fetch(url).html();
     return Response.success({
         name: doc.select("h2.cover-title").text(),
@@ -7,6 +8,6 @@ function execute(url) {
         description: doc.select(".product-synopsis-inner").first().text().replace(/ Xem thêm|Giới thiệu /gi,''),
         detail : doc.select(".cover-artist").first().text() + '<br>Trans : ' +doc.select(".groups-name").first().text(),
         ongoing: true,
-        host: "https://truyengihotne.net"
+        host: "https://truyengihotne.com"
     });
 }
