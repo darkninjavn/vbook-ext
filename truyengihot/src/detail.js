@@ -1,5 +1,5 @@
 function execute(url) {
-    url = url.replace("truyengihotne.net","truyengihotne.com")
+    url = url.replace("truyengihotne.com")
     var doc = fetch(url).html();
     return Response.success({
         name: doc.select("h2.cover-title").text(),
