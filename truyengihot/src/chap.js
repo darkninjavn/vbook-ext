@@ -1,5 +1,5 @@
 function execute(url) {
-    url = url.replace("truyengihotne.net","truyengihotne.com")
+    url = url.replace("truyengihotne.com")
     const base = 'https://truyengihotne.com';
     let response = fetch(url);
     if(response.ok){
