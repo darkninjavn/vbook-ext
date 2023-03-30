@@ -1,5 +1,5 @@
 function execute(url) {
-    url = url.replace("truyengihotne.net","truyengihotne.com")
+    url = url.replace("truyengihotne.com")
     let doc = fetch(url).html();
     let el = doc.select("#episode_list li a");
     let data = [];
